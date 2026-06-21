@@ -80,17 +80,14 @@ export default function Footer() {
           <p>
             © {year} {SITE.name}. All rights reserved.
           </p>
-          <p>
-            Built with care in {SITE.location}. Trade responsibly — never invest
-            more than you can afford to lose.
+          <p className="flex flex-wrap items-center justify-center gap-1.5 text-center sm:justify-end sm:text-right">
+            Built with
+            <Heart size={14} className="fill-caramel text-caramel" aria-label="love" />
+            in {SITE.location} by{" "}
+            <span className="font-medium text-paper">Fazal Elahi</span>. Trade
+            responsibly — never invest more than you can afford to lose.
           </p>
         </div>
-
-        <p className="mt-6 flex items-center justify-center gap-1.5 text-sm text-haze/60">
-          Built with
-          <Heart size={14} className="fill-caramel text-caramel" aria-label="love" />
-          by <span className="font-medium text-paper">Fazal Elahi</span>
-        </p>
       </div>
     </footer>
   );
