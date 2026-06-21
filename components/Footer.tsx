@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Heart } from "lucide-react";
 import { NAV_LINKS, SOCIALS, SITE } from "@/lib/data";
 
 export default function Footer() {
@@ -84,6 +85,12 @@ export default function Footer() {
             more than you can afford to lose.
           </p>
         </div>
+
+        <p className="mt-6 flex items-center justify-center gap-1.5 text-sm text-haze/60">
+          Built with
+          <Heart size={14} className="fill-caramel text-caramel" aria-label="love" />
+          by <span className="font-medium text-paper">Fazal Elahi</span>
+        </p>
       </div>
     </footer>
   );
