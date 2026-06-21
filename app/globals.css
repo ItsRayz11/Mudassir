@@ -27,6 +27,9 @@
   body {
     @apply bg-cream text-ink font-sans antialiased;
     text-rendering: optimizeLegibility;
+    /* Guard against any stray horizontal scroll on small screens
+       (decorative glows / floating badges that overhang their container). */
+    overflow-x: clip;
   }
 
   ::selection {
