@@ -84,8 +84,9 @@ export default function Footer() {
             Built with
             <Heart size={14} className="fill-caramel text-caramel" aria-label="love" />
             in {SITE.location} by{" "}
-            <span className="font-medium text-paper">Fazal Elahi</span>. Trade
-            responsibly — never invest more than you can afford to lose.
+            <span className="font-medium text-paper">Fazal Elahi</span> — a gift
+            for {SITE.name}. Trade responsibly — never invest more than you can
+            afford to lose.
           </p>
         </div>
       </div>
