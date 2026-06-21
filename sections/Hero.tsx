@@ -25,7 +25,7 @@ export default function Hero() {
 
       <div className="container-px mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Copy */}
-        <div className="relative z-10">
+        <div className="relative z-10 order-2 lg:order-1">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,46 +115,46 @@ export default function Hero() {
           </motion.dl>
         </div>
 
-        {/* Portrait centerpiece with subtle 3D ambient accents */}
+        {/* Logo centerpiece with subtle 3D ambient accents */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: EASE, delay: 0.2 }}
-          className="relative z-0 mx-auto flex w-full max-w-sm items-center justify-center lg:max-w-md"
+          className="relative z-0 order-1 mx-auto flex w-full max-w-[16rem] items-center justify-center sm:max-w-sm lg:order-2 lg:max-w-md"
         >
           {/* Ambient floating 3D orbs (lazy, client-only) */}
           <div className="absolute inset-0 -m-12 sm:-m-16">
             <Hero3D />
           </div>
 
-          {/* Champagne glow behind the portrait */}
+          {/* Champagne glow behind the logo */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-6 rounded-full bg-caramel/20 blur-[80px]"
+            className="pointer-events-none absolute inset-4 rounded-full bg-caramel/25 blur-[90px]"
           />
 
-          {/* Framed portrait */}
-          <div className="relative aspect-[4/5] w-full">
-            {/* Thin outer gold ring */}
-            <div className="absolute -inset-2.5 rounded-[2rem] border border-caramel/30" />
-            <div className="relative h-full w-full overflow-hidden rounded-[1.6rem] border border-walnut/40 shadow-soft ring-1 ring-paper/5">
+          {/* Brand logo */}
+          <div className="relative aspect-square w-full">
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              className="relative h-full w-full"
+            >
               <Image
-                src="/portrait.jpeg"
-                alt={`${SITE.name} — ${SITE.role}`}
+                src="/logo.jpeg"
+                alt="Mudassar Online Earning — Content Creator & Web3 Educator"
                 fill
                 priority
-                sizes="(max-width: 1024px) 90vw, 420px"
-                className="object-cover"
+                sizes="(max-width: 1024px) 80vw, 440px"
+                className="rounded-full object-cover shadow-soft ring-1 ring-caramel/40"
               />
-              {/* Fade the base of the photo into the page for a seamless blend */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-cream/70 via-transparent to-transparent" />
-            </div>
+            </motion.div>
 
             {/* Floating social-proof badge */}
             <motion.div
               animate={{ y: [0, -9, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-              className="absolute -bottom-4 -left-4 flex items-center gap-2.5 rounded-2xl border border-walnut/40 bg-sand/80 px-4 py-2.5 shadow-soft backdrop-blur"
+              className="absolute -bottom-2 -left-2 flex items-center gap-2.5 rounded-2xl border border-walnut/40 bg-sand/80 px-4 py-2.5 shadow-soft backdrop-blur sm:-bottom-4 sm:-left-4"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-caramel/15 text-caramel">
                 <BadgeCheck size={16} />

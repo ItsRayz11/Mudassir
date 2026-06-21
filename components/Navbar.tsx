@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -43,9 +44,14 @@ export default function Navbar() {
           className="focus-ring flex items-center gap-2.5 rounded-full"
           aria-label={`${SITE.name} — home`}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-walnut to-caramel font-display text-lg font-bold text-paper">
-            M
-          </span>
+          <Image
+            src="/logo.jpeg"
+            alt="Mudassar Online Earning logo"
+            width={44}
+            height={44}
+            priority
+            className="h-10 w-10 rounded-full object-cover ring-1 ring-caramel/40"
+          />
           <span className="hidden font-display text-base font-semibold text-paper sm:block">
             Mudassar
           </span>

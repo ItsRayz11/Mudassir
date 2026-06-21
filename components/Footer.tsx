@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { NAV_LINKS, SOCIALS, SITE } from "@/lib/data";
 
 export default function Footer() {
@@ -12,9 +13,13 @@ export default function Footer() {
               href="#top"
               className="focus-ring inline-flex items-center gap-2.5 rounded-full"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-caramel to-[#caa86a] font-display text-lg font-bold text-espresso">
-                M
-              </span>
+              <Image
+                src="/logo.jpeg"
+                alt="Mudassar Online Earning logo"
+                width={44}
+                height={44}
+                className="h-10 w-10 rounded-full object-cover ring-1 ring-caramel/40"
+              />
               <span className="font-display text-lg font-semibold">
                 {SITE.brand}
               </span>
